@@ -1,0 +1,152 @@
+/*
+  GENERAL CODES
+*/
+
+html{
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.container{
+  width: 960px;
+  margin: 0 auto;
+}
+
+body{
+  font-family: helvetica;
+}
+
+/*
+  HEADER CSS CODE
+*/
+
+#banner-image{
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30rem;
+}
+
+header{
+  background-color: cadetblue;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.banner{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo{
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.header-logo img{
+  margin-right: 1rem;
+  height: 1.5rem;
+}
+
+nav{
+  display: inline-flex;
+  align-items: center;
+  width: 50%;
+}
+
+.browser-nav{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.browser-nav a{
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+.banner-text{
+  background-color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+  padding: 1.5rem 5rem;
+  position: relative;
+  top: 10rem;
+  left: 22rem;
+  width: 24rem;
+}
+
+@media only screen and (min-width: 1024px){
+  .mobile-nav{
+    display: none;
+  }
+}
+
+/* THIS IS THE MAIN CONTENT OF THE CODE */
+
+.services{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-top: 3rem;
+}
+
+.service-container{
+  width: 5rem;
+  height: 9rem;
+  display: flex;
+}
+
+.service-image{
+  display: flex;
+  flex-direction: column;
+}
+
+.services span{
+  text-align: center;
+}
+
+/* THIS IS THE PHILO-APP CONTENT OF THE CODE */
+
+.phil-app{
+  display: flex;
+  justify-content: space-around;
+}
+
+.philosophy,
+.appointments{
+  width: 35%;
+}
+
+.title{
+  background-color: cadetblue;
+  padding: 0.5rem 1.25rem;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  width: 10rem;
+}
+
+/* THIS IS THE CODE FOR THE FOOTER CONTENT */
+
+footer{
+  margin-top: 5rem;
+}
+
+.footer-logo{
+  padding: 4rem;
+  background-color: azure;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img{
+  margin-right: 1rem;
+  height: 1.5rem;
+}
