@@ -8,7 +8,7 @@ html{
 }
 
 .container{
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -26,6 +26,7 @@ body{
   background-position: center;
   background-size: cover;
   height: 30rem;
+  padding-top: 1rem;
 }
 
 header{
@@ -69,16 +70,19 @@ nav{
   margin-left: 2rem;
 }
 
+.text-box{
+  display: flex;
+  justify-content: flex-end;
+}
+
 .banner-text{
+  margin-top: 10rem;
   background-color: white;
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.2;
   padding: 1.5rem 5rem;
-  position: relative;
-  top: 10rem;
-  left: 22rem;
-  width: 24rem;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 1024px){
@@ -91,7 +95,7 @@ nav{
 
 .services{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: baseline;
   margin-top: 3rem;
 }
@@ -105,22 +109,46 @@ nav{
 .service-image{
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.paper-image img{
+  width: 3.5rem;
+}
+
+.ruler-image img{
+  width: 5rem;
+}
+
+.truck-image img{
+  width: 5rem;
+}
+
+.services img{
+  margin-bottom: 1rem;
 }
 
 .services span{
   text-align: center;
 }
 
+.ruler{
+  margin: 0 6rem;
+}
 /* THIS IS THE PHILO-APP CONTENT OF THE CODE */
 
 .phil-app{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .philosophy,
 .appointments{
   width: 35%;
+}
+
+.philosophy{
+  margin-right: 5%;
 }
 
 .title{
@@ -140,13 +168,144 @@ footer{
 }
 
 .footer-logo{
-  padding: 4rem;
   background-color: azure;
   display: flex;
   align-items: center;
 }
 
 .footer-logo img{
-  margin-right: 1rem;
+  margin: 4rem 1rem 4rem 4rem;
   height: 1.5rem;
+}
+
+/* MEDIA QUERY FOR DESKTOP SIZE (1025+) */
+
+@media only screen and (min-width: 1025px){
+  .mobile-nav{
+    display: none;
+  }
+}
+
+/* MEDIA QUERY FOR TABLET 1024PX SIZE */
+
+@media only screen and (max-width: 1024px){
+  .container{
+    width: 100%;
+  }
+
+  .mobile-nav{
+    display: none;
+  }
+
+  #banner-image{
+    padding-top: 0px;
+    height: 22rem;
+  }
+
+  .text-box{
+  }
+
+  .banner-text{
+    font-size: 1.33rem;
+    margin-top: 5rem;
+    margin-right: 2rem;
+    padding: 0.75rem 4rem;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE 470PX */
+
+@media only screen and (max-width: 600px){
+  .container{
+    width: 100%;
+  }
+
+  .header-logo span{
+    display: none;
+  }
+
+  .mobile-nav{
+    display: static;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+  }
+
+  .mobile-nav a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .browser-nav{
+    display: none;
+  }
+
+  #banner-image{
+    height: 17rem;
+  }
+
+  .banner-text{
+    display: flex;
+    justify-content: center;
+    margin: 9rem 0 0 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .services{
+    flex-direction: column;
+    align-items: center;
+    margin: 3.77rem 0;
+  }
+
+  .service-image{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service-image span{
+    font-size: 0.77rem;
+  }
+
+  .ruler{
+    margin: 1.54rem 0;
+  }
+
+  .phil-app{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .philosophy,
+  .appointments{
+    width: 100%;
+  }
+
+  .philosophy{
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+
+  .description{
+    font-size: 0.77rem;
+    text-align: left;
+    padding-left: 0.25rem;
+  }
+
+  .title{
+    width: 100%;
+    text-align: center;
+    padding:  0.5rem 0;
+  }
+
+  .footer-logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-logo span{
+    display: none;
+  }
 }
